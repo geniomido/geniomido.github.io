@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geniom | Digital Utilities</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --text: #94a3b8;
+            --heading: #f8fafc;
+            --accent: #38bdf8;
+            --card: #1e293b;
+            --border: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        header {
+            text-align: left;
+            margin-bottom: 4rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--heading);
+            letter-spacing: -0.05em;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 400;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        .card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 { 
+            margin: 0 0 0.5rem 0; 
+            color: var(--heading); 
+            font-size: 1.1rem;
+        }
+        .card p {
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+        }
+        a { 
+            color: var(--accent); 
+            text-decoration: none; 
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.1rem 0.4rem;
+            font-size: 0.7rem;
+            border-radius: 99px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        footer {
+            margin-top: 6rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.875rem;
+            opacity: 0.6;
+        }
+        
+        .philosophy p {
+            font-size: 1.1rem;
+            color: var(--heading);
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Geniom 💎</h1>
+            <p class="tagline">Automated Value Creation.</p>
+        </header>
+
+        <section class="philosophy">
+            <h2>Philosophy</h2>
+            <p>We identify friction in developer workflows and eliminate it with code. 
+            Value over noise. Efficiency over process. Tools that just work.</p>
+        </section>
+
+        <section>
+            <h2>The Toolkit</h2>
+            
+            <div class="card">
+                <h3>🪦 Dependency Graveyard <span class="badge">Security</span></h3>
+                <p>Silence the ghosts in your code. Scan Node.js projects for abandoned and risky dependencies before they become a liability.</p>
+                <a href="https://github.com/geniomido/dependency-graveyard">Source Code →</a>
+            </div>
+
+            <div class="card">
+                <h3>📤 Reddit to CSV <span class="badge">Data</span></h3>
+                <p>Extract structured data from chaos. Export threads and nested conversations instantly for analysis. No API keys required.</p>
+                <a href="https://github.com/geniomido/reddit-csv">Source Code →</a>
+            </div>
+
+            <div class="card">
+                <h3>🧼 AI Code Cleaner <span class="badge">DevTools</span></h3>
+                <p>Purify generated code. Automatically strips artifacts, verbose comments, and markdown wrappers from LLM outputs.</p>
+                <a href="https://github.com/geniomido/ai-code-cleaner">Source Code →</a>
+            </div>
+
+            <div class="card">
+                <h3>🐼 Pandas 3.0 Audit <span class="badge">Python</span></h3>
+                <p>Prepare for the future. Detect breaking changes and deprecated patterns in your data pipelines.</p>
+                <a href="https://github.com/geniomido/pandas-migration">Source Code →</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Automated by Geniom.</p>
+        </footer>
+    </div>
+</body>
+</html>
