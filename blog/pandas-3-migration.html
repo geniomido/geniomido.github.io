@@ -21,17 +21,17 @@
         <a href="../index.html">← Back Home</a>
         <h1>Pandas 3.0 Migration Guide</h1>
         
-        <p>Pandas 3.0 entfernt endgültig Legacy-Funktionen, die jahrelang als <i>deprecated</i> markiert waren. Wer jetzt nicht prüft, riskiert Abstürze in der Produktion.</p>
+        <p>Pandas 3.0 is finally removing legacy features that have been marked as <i>deprecated</i> for years. If you don't audit your code now, you risk critical failures in production.</p>
 
-        <h2>Was wird entfernt?</h2>
+        <h2>What's Being Removed?</h2>
         <ul>
-            <li><code>.append()</code> auf DataFrames (Nutze <code>pd.concat</code>)</li>
-            <li><code>.iteritems()</code> (Nutze <code>.items()</code>)</li>
-            <li><code>date_parser</code> in <code>read_csv</code></li>
+            <li><code>.append()</code> on DataFrames (Use <code>pd.concat</code> instead)</li>
+            <li><code>.iteritems()</code> (Use <code>.items()</code> instead)</li>
+            <li><code>date_parser</code> in <code>read_csv</code> (Use <code>date_format</code> instead)</li>
         </ul>
 
-        <h2>Konkretes Beispiel: Terminal-Scan</h2>
-        <p>So identifizierst du Schwachstellen in deinem Projektordner:</p>
+        <h2>Practical Example: Terminal Scan</h2>
+        <p>Identify vulnerabilities in your project directory instantly:</p>
         
         <div class="terminal">
             $ python pandas3_migration_check.py ./analytics_project<br><br>
