@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandas 3.0 Migration Guide | Geniom Blog</title>
+    <style>
+        :root { --bg: #0f172a; --text: #94a3b8; --heading: #f8fafc; --accent: #38bdf8; --card: #1e293b; --border: #334155; }
+        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        h1, h2, h3 { color: var(--heading); }
+        pre { background: var(--card); padding: 1rem; border-radius: 0.5rem; border: 1px solid var(--border); overflow-x: auto; color: #e2e8f0; }
+        code { font-family: monospace; color: var(--accent); }
+        a { color: var(--accent); text-decoration: none; }
+        .terminal { background: #1e293b; color: #f8fafc; padding: 1rem; border-radius: 0.5rem; font-family: monospace; border-left: 4px solid var(--accent); }
+        .issue { color: #f87171; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html">← Back Home</a>
+        <h1>Pandas 3.0 Migration Guide</h1>
+        
+        <p>Pandas 3.0 entfernt endgültig Legacy-Funktionen, die jahrelang als <i>deprecated</i> markiert waren. Wer jetzt nicht prüft, riskiert Abstürze in der Produktion.</p>
+
+        <h2>Was wird entfernt?</h2>
+        <ul>
+            <li><code>.append()</code> auf DataFrames (Nutze <code>pd.concat</code>)</li>
+            <li><code>.iteritems()</code> (Nutze <code>.items()</code>)</li>
+            <li><code>date_parser</code> in <code>read_csv</code></li>
+        </ul>
+
+        <h2>Konkretes Beispiel: Terminal-Scan</h2>
+        <p>So identifizierst du Schwachstellen in deinem Projektordner:</p>
+        
+        <div class="terminal">
+            $ python pandas3_migration_check.py ./analytics_project<br><br>
+            🔍 Scanning ./analytics_project for Pandas 3.0 breaking changes...<br><br>
+            📄 ./analytics_project/process_data.py<br>
+            <span class="issue">   Line 42: Warning: .append() on DataFrames/Series is removed. Use pd.concat().</span><br>
+            <span class="issue">   Line 89: Deprecation: .iteritems() is removed. Use .items() instead.</span><br><br>
+            📄 ./analytics_project/loaders/csv_loader.py<br>
+            <span class="issue">   Line 12: Deprecation: date_parser argument in read_csv is removed. Use date_format.</span><br><br>
+            ⚠️ Found 3 potential issues.<br>
+            💡 Need a full migration? Contact GENIOM.
+        </div>
+
+        <p><a href="https://github.com/geniomido/pandas-migration">Download Tool on GitHub →</a></p>
+    </div>
+</body>
+</html>
